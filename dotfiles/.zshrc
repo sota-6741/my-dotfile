@@ -123,9 +123,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 # システム標準の python3 を使う
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
-# apt-get 版スクリプトを読み込む
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
 # texlive
 export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
 
