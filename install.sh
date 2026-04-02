@@ -11,7 +11,7 @@ fi
 
 function deploy_dotfile() {
   local relative_path="$1"
-  local src_path="$DOTFILES_DIR/$relative_path"
+  local src_path="$DOTFILES_DIR/dotfiles/$relative_path"
   local dest_path="$HOME/$relative_path"
   local dest_dir
   dest_dir=$(dirname "$dest_path")
