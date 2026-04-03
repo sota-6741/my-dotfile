@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DOTFILES_DIR=$(cd "$(dirname "$0")" && pwd)
 
 TIMESTAMP=$(date '+%Y%m%d%H%M%S')
