@@ -1,4 +1,4 @@
 .gitconfig
 .zshrc
 
-.config/tmux/tmux.conf
+.config/tmux
