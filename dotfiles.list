@@ -2,3 +2,4 @@
 .zshrc
 
 .config/tmux
+.config/nvim
