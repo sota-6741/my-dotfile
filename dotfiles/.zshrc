@@ -134,5 +134,10 @@ eval "$(rbenv init - bash)"
 # ====== Antigravity Launcher Config ======
 export PATH="$HOME/.local/bin:$PATH"
 # ====== End of Antigravity Launcher Config ======
+
+# Neovim / Mason
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+export PATH="$HOME/.local/share/nvim/lazy-rocks/hererocks/bin:$PATH"
+
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 fpath+=${ZDOTDIR:-~}/.zsh_functions

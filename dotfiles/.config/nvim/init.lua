@@ -15,4 +15,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.opt.clipboard = "unnamedplus"
 
+-- Prepend mason bin to PATH
+local mason_bin = vim.fn.stdpath("data") .. "/mason/bin"
+vim.env.PATH = mason_bin .. ":" .. vim.env.PATH
+
+-- Ensure Treesitter's site directory is in runtimepath
+local install_path = vim.fn.stdpath("data") .. "/site"
+vim.opt.runtimepath:append(install_path)
+
 require("config.lazy")

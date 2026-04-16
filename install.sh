@@ -43,6 +43,6 @@ while IFS= read -r line || [[ -n "$line" ]]; do
   [[ -z "$line" || "$line" =~ ^# ]] && continue
 
   deploy_dotfile "$line"
-done < "$LIST_FILE"
+done <"$LIST_FILE"
 
 echo "All done!"
