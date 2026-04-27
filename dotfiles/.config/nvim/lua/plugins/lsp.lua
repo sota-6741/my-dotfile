@@ -4,8 +4,10 @@ return {
     opts = {
       servers = {
         gopls = {},
+        -- typescript-tools を使うため、他のTS関連LSPが絶対に起動しないようにする
+        vtsls = { enabled = false, autostart = false },
+        tsserver = { enabled = false, autostart = false },
       },
-      -- 診断 (Diagnostics) の設定
       diagnostics = {
         virtual_text = true,
         float = {
