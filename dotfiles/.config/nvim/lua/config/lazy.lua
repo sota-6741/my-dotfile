@@ -30,11 +30,22 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
+  ui = {
+    -- ログ取得によるハングアップを防ぐ
+    icons = {
+      ft = "",
+      lazy = "󰂠 ",
+      loaded = "",
+      not_loaded = "",
+    },
+  },
+  -- 変更履歴の取得を無効化してハングを防止
+  changelog = { enabled = false },
   install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
-  }, -- automatically check for plugin updates
+  profiling = {
+    loader = false,
+    require = false,
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
