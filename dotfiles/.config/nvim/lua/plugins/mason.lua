@@ -1,19 +1,20 @@
 return {
-  -- Mason 本体 (リポジトリ名を mason-org に更新)
   {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "stylua",
         "shfmt",
+        "eslint-lsp",
+        "prettier",
+        -- typescript-tools が必要とする tsserver を提供するパッケージ
+        "typescript-language-server", 
       },
     },
   },
-  -- Mason LSPConfig (リポジトリ名を mason-org に更新)
-  -- 注意: gopls などの LSP サーバーは lsp.lua の servers で管理されているため、
-  -- ここでの ensure_installed は冗長ですが、明示的に残す場合は mason-org を使用します。
   {
     "mason-org/mason-lspconfig.nvim",
+    -- LazyVim側と重複してインストールが走るのを防ぐため、最低限に
     opts = {
       ensure_installed = { "gopls" },
     },
